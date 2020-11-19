@@ -1,3 +1,8 @@
+.cc {
+    display: inline-block;
+    color: red;
+}
+
 /*! * * * * * * * * * * * * * * * * * * * *\  
   CSShake :: shake-little
   v1.5.0
@@ -7,8 +12,9 @@
   Licensed under MIT
 \* * * * * * * * * * * * * * * * * * * * */
 .shake-little {
-  display: flex;
-  transform-origin: center center; }
+  display: inline-block;
+  transform-origin: center center; 
+}
 
 @keyframes shake-little {
   2% {
@@ -128,8 +134,9 @@
   Licensed under MIT
 \* * * * * * * * * * * * * * * * * * * * */
 .shake {
-  display: inherit;
-  transform-origin: center center; }
+  display: inline-block;
+  transform-origin: center center; 
+}
 
 @keyframes shake {
   2% {
@@ -244,23 +251,27 @@
   flex-wrap: wrap;
   width: 100%;
   overflow-wrap: anywhere;
+  color: transparent;
 }
 
 #text {
-  width: 200px;
-  height: 20px;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  outline: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 33vw;
-  max-width: 50.82vh;
-  min-height: 66vh;
-  color: transparent;
+    /* display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: anywhere; */
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 50.82vh;
+    min-height: 66vh;
+    /* color: transparent; */
+    caret-color: black;
 }
 
 /* #first {
