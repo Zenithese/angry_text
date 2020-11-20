@@ -1,7 +1,6 @@
 let caret
 
 function angryText() {
-
     const caret = new Caret
     console.log(caret)
     const editor = document.getElementById('rich_text')
@@ -10,25 +9,21 @@ function angryText() {
     if (!last.length) last = "&nbsp;"
     const settling = characters.pop()
 
-    editor.innerHTML = characters.length ? characters.join(" ") + "&nbsp;" : ""
-
+    editor.innerHTML = characters.length ? characters.join(" ") : ""
     if (settling) {
-        const child = applyEffect("shake-little", settling + "&nbsp;", editor, "penultimate")
+        const child = applyEffect("shake-little", "&nbsp;" + settling, editor, "penultimate")
         setTimeout(() => {
             child.className = "settled"
         }, 1000)
     }
-
     if (last) {
-        const child = applyEffect("shake", last, editor, "last")
+        const child = applyEffect("shake", "&nbsp;" + last, editor, "last")
         setTimeout(() => {
             child.className = "settled"
         }, 1000)
     }
-
     console.log(caret)
     caret.place()
-
 }
 
 function applyEffect(effect, text, parent, id) {
