@@ -33,3 +33,14 @@ function fill() {
     }
 
 }
+
+// function command() {
+//     document.execCommand('bold');
+// }
+
+// function test(event) {
+//     if (event.keyCode == 16) { // Execute command if user presses the SHIFT button:
+//         // document.execCommand('bold');
+//         // applyEffect("shake", document.getSelection().toString())
+//     }
+// }

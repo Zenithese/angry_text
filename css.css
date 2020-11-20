@@ -1,6 +1,5 @@
-.cc {
-    display: inline-block;
-    color: red;
+.settled {
+  display: inline-block;
 }
 
 /*! * * * * * * * * * * * * * * * * * * * *\  
@@ -254,7 +253,7 @@
   color: transparent;
 }
 
-#text {
+#rich_text {
     /* display: flex;
     flex-wrap: wrap;
     overflow-wrap: anywhere; */
@@ -271,20 +270,8 @@
     max-width: 50.82vh;
     min-height: 66vh;
     /* color: transparent; */
-    caret-color: black;
+    /* caret-color: black; */
 }
-
-/* #first {
-  display: flex;
-}
-
-#settling {
-  display: flex;
-}
-
-#second {
-  display: flex;
-} */
 
 html {
     background-color: blueviolet;

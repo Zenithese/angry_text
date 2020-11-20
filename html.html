@@ -10,7 +10,8 @@
 
     <body onkeydown="test(event)">
         <div id="container">
-            <p id="text" onkeyup="angryText()" contenteditable="true">
+            <p id="rich_text" onkeypress="angryText()" contenteditable="true">
+                <!-- this is a <span class="shake">test</span> -- inline? -->
             <p>
             
             <p id="fill">
@@ -19,8 +20,9 @@
                 <span id="second"></span>
             </p>
         </div>
-
-        <script src="logic.js"></script>
+        
+        <script src="caret.js"></script>
+        <script src="angry_text.js"></script>
     </body>
 
     
