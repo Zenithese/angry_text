@@ -18,4 +18,15 @@ function format(text) {
 
 }
 
+function test(event) {
+    if (event.keyCode == 16) { // Execute command if user presses the SHIFT button:
+        const caret = new Caret
+        console.log(caret)
+    }
+
+    // if (event.keyCode == 32) { // Execute command if user presses the SPACEBAR button:
+    //     debugger
+    // }
+}
+
 console.log(format("this is"))
