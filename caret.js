@@ -31,5 +31,14 @@ class Caret {
             this.selection.addRange(this.range);
         }
     }
+
+    whitespace() {
+        const range = new Range;
+        const span = document.getElementById("last")
+        range.setStartAfter(span);
+        range.collapse(true);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
 }
 

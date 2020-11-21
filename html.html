@@ -10,9 +10,7 @@
 
     <body onkeydown="test(event)">
         <div id="container">
-            <p id="rich_text" onkeypress="angryText()" contenteditable="true">
-                <!-- this is a <span class="shake">test</span> -- inline? -->
-            <p>
+            <p id="rich_text" onkeypress="angryText(event)" onkeyup="whitespace(event)" contenteditable="true"><p>
             
             <p id="fill">
                 <span id="first"></span>
@@ -21,6 +19,7 @@
             </p>
         </div>
         
+        <script src="shake_text.js"></script>
         <script src="caret.js"></script>
         <script src="angry_text.js"></script>
     </body>
