@@ -20,8 +20,11 @@ function format(text) {
 
 function test(event) {
     if (event.keyCode == 16) { // Execute command if user presses the SHIFT button:
-        const caret = new Caret
-        console.log(caret)
+        // const caret = new Caret
+        // console.log(caret)
+        console.log(document.getElementById("rich_text").innerText)
+        console.log(document.getElementById("penultimate").innerText)
+        console.log(document.getElementById("last").innerText)
     }
 
     // if (event.keyCode == 32) { // Execute command if user presses the SPACEBAR button:
@@ -29,4 +32,4 @@ function test(event) {
     // }
 }
 
-console.log(format("this is"))
+console.log(format("this i. s"))

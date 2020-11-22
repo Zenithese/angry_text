@@ -37,8 +37,8 @@ class Caret {
         const span = document.getElementById("last")
         range.setStartAfter(span);
         range.collapse(true);
-        selection.removeAllRanges();
-        selection.addRange(range);
+        this.selection.removeAllRanges();
+        this.selection.addRange(range);
     }
 }
 

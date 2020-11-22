@@ -1,5 +1,5 @@
 class ShakeText {
-    constructor(text) {
+    constructor(text, bug = 0) {
         this.text = text.replace(/\s/g, " ")
         this.inital = this.text.split("").reverse()
         this.penultimate = ""
@@ -19,7 +19,7 @@ class ShakeText {
 
     finalWords(container, whitespace = false) {
         if (this.penultimate) {
-            const child = this.applyEffect("shake-little", this.penultimate, container, "penultimate")
+            const child = this.applyEffect("shake-little", this.penultimate, container, whitespace ? "new-penultimate" : "penultimate")
             setTimeout(() => {
                 child.className = "settled"
             }, 1000)
@@ -44,7 +44,9 @@ class ShakeText {
             // Move the caret immediately after the inserted span
             if (effect === "shake") {
                 const range = new Range;
-                whitespace ? range.setStart(span.firstChild, 1) : range.setStartAfter(span);
+                whitespace ? 
+                    range.setStart(span.firstChild, 1)
+                    : range.setStartAfter(span);
                 range.collapse(true);
                 selection.removeAllRanges();
                 selection.addRange(range);
@@ -54,3 +56,9 @@ class ShakeText {
         }
     }
 }
+
+// whitespace ?
+//     text.length > 1 ?
+//         range.setStart(span.firstChild, 1)
+//         : range.setStart(span.firstChild, 0)
+//     : range.setStartAfter(span);
