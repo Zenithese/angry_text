@@ -14,7 +14,7 @@ function whitespace(event) {
         if (caret.parentNode.id === "last" && caret.startOffset < caret.anchorNode.data.length) {
             const container = document.getElementById('rich_text')
             const last = document.getElementById("last")
-            const text = new ShakeText(last.innerText, bug)
+            const text = new ShakeText(last.innerText)
             console.log(`_${text.penultimate}_`, `_${text.ultimate}_`)
             last.remove()
             text.finalWords(container, true)
@@ -22,7 +22,7 @@ function whitespace(event) {
             // for macOS "add period with double-space" feature
             const newpen = document.getElementById("new-penultimate")
             const ultimate = document.getElementById("last")
-            if (newpen.innerHTML.slice(newpen.innerHTML.length - 6) == "&nbsp;") {
+            if (newpen.innerHTML.length > 6 && newpen.innerHTML.slice(newpen.innerHTML.length - 6) == "&nbsp;") {
                 ultimate.innerHTML = "&nbsp;" + ultimate.innerHTML
                 newpen.innerHTML = newpen.innerHTML.slice(0, newpen.innerHTML.length - 6)
                 const range = new Range;
