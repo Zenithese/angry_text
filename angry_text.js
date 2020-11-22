@@ -15,7 +15,6 @@ function whitespace(event) {
             const container = document.getElementById('rich_text')
             const last = document.getElementById("last")
             const text = new ShakeText(last.innerText, bug)
-            bug++
             console.log(`_${text.penultimate}_`, `_${text.ultimate}_`)
             last.remove()
             text.finalWords(container, true)
