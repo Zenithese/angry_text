@@ -20,6 +20,7 @@ function whitespace(event) {
             last.remove()
             text.finalWords(container, true)
             
+            // for macOS "add period with double-space" feature
             const newpen = document.getElementById("new-penultimate")
             const ultimate = document.getElementById("last")
             if (newpen.innerHTML.slice(newpen.innerHTML.length - 6) == "&nbsp;") {
